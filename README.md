@@ -45,14 +45,30 @@ Then do the steps described below for each case on selected RDMS
 
 #### Phantom read
 
+![Phantom Read 1](./mysql_queries/phantom_read_1.png?raw=true "Phantom Read 1")
 
+![Phantom Read 2](./mysql_queries/phantom_read_2.png?raw=true "Phantom Read 2")
 
 ## Postgres
 
 #### Lost Update
 
+![Lost Update PG 1](./postgres_queries/lost_update_1.png?raw=true "Lost Update PG 1")
+
+![Lost Update PG 2](./postgres_queries/lost_update_2.png?raw=true "Lost Update PG 2")
+
 #### Dirty Read
+
+Read Uncommitted not supported by PostgreSQL, so can not be reproduced
 
 #### Non-repeatable read
 
+![Non-repeatable Read PG 1](./postgres_queries/non_repeatable_read_1.png?raw=true "Non-repeatable Read PG 1")
+
+![Non-repeatable Read PG 2](./postgres_queries/non_repeatable_read_2.png?raw=true "Non-repeatable Read PG 2")
+
 #### Phantom read
+
+![Phantom Read PG 1](./postgres_queries/phantom_read_1.png?raw=true "Phantom Read PG 1")
+
+![Phantom Read PG 2](./postgres_queries/phantom_read_2.png?raw=true "Phantom Read PG 2")
