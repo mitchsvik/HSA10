@@ -1,0 +1,11 @@
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+
+BEGIN;
+
+SELECT * FROM `user` WHERE `id` = 1;
+
+UPDATE `user` SET `date_of_birth` = '2000-03-10' WHERE `id` = 1;
+
+ROLLBACK;
+
+SELECT * FROM `user` WHERE `id` = 1;

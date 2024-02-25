@@ -1,0 +1,33 @@
+version: '3.9'
+services:
+  percona:
+    container_name: hsa10_percona
+    platform: linux/amd64
+    image: percona:8
+    restart: always
+    volumes:
+      - mysql_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: $DB_ROOT_PASSWORD
+      MYSQL_DATABASE: hsa10
+      MYSQL_USER: hsa10
+      MYSQL_PASSWORD: $DB_PASSWORD
+    ports:
+      - "3306:3306"
+
+  postgres:
+    container_name: hsa10_postgres
+    restart: always
+    image: postgres:12.14
+    environment:
+      - POSTGRES_USER=$DB_USER
+      - POSTGRES_PASSWORD=$DB_PASSWORD
+      - POSTGRES_DB=hsa10
+    volumes:
+      - postges_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  postges_data: {}
+  mysql_data: {}
